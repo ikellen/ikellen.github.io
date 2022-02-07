@@ -64,3 +64,6 @@ img {
       rgba(109, 186, 130, 0.1) 100%
     );
   }
+#footer, #footer:before {
+    background: transparent!important
+}
