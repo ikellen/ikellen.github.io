@@ -7,7 +7,7 @@ img {
     cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
         default;
 }
-#body-wrap {
+#sidebar {
     background: -webkit-linear-gradient(
       0deg,
       rgba(247, 149, 51, 0.1) 0,
@@ -64,3 +64,6 @@ img {
       rgba(109, 186, 130, 0.1) 100%
     );
   }
+#footer, #footer:before {
+    background: transparent!important
+}
