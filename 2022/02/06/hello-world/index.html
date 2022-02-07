@@ -158,7 +158,7 @@
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'kellen-0ga9c5pga273d643',
+      envId: 'https://twikoo-kellen.vercel.app',
       region: '',
       onCommentLoaded: function () {
         btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.vemoji)'))
@@ -168,7 +168,7 @@
 
   const getCount = () => {
     twikoo.getCommentsCount({
-      envId: 'kellen-0ga9c5pga273d643',
+      envId: 'https://twikoo-kellen.vercel.app',
       region: '',
       urls: [window.location.pathname],
       includeReply: false
