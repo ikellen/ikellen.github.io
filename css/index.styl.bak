@@ -1,0 +1,32 @@
+if hexo-config('css_prefix')
+  @import 'nib'
+
+@import '_third-party/normalize.min.css'
+// project
+@import 'var'
+@import '_global/*'
+@import '_highlight/highlight'
+@import '_page/*'
+@import '_layout/*'
+@import '_tags/*'
+@import '_mode/*'
+
+// search
+if hexo-config('algolia_search.enable')
+  @import '_search/index'
+  @import '_search/algolia'
+
+if hexo-config('local_search') && hexo-config('local_search.enable')
+  @import '_search/index'
+  @import '_search/local-search'
+
+*::-webkit-scrollbar-thumb
+  background-image: -webkit-linear-gradient( 45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent)
+  border-radius: 2em
+
+*::-webkit-scrollbar-corner
+  background-color: transparent
+
+*::-moz-selection
+  color: #fff
+  background-color: var(--btn-bg)
