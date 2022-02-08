@@ -7,7 +7,7 @@ img {
     cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
         default;
 }
-#body-wrap {
+[data-theme='light'] #body-wrap {
     background: -webkit-linear-gradient(
       0deg,
       rgba(247, 149, 51, 0.1) 0,
@@ -64,6 +64,81 @@ img {
       rgba(109, 186, 130, 0.1) 100%
     );
   }
-#footer, #footer:before {
+/*页脚部分*/
+#footer {
+    background: transparent!important;
+    color: #000;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    backdrop-filter: saturate(100%) blur(5px)
+}
+
+#footer::before {
     background: transparent!important
 }
+
+#footer #footer-wrap {
+    color: #999AAA
+}
+
+#footer #footer-wrap a {
+    color: #999AAA
+}
+#page h1.page-title, #post>#post-info {
+  text-align: center;
+}
+/*twikoo页脚隐藏*/
+.tk-footer {
+  display: none;
+}
+.vpower {
+  display: none;
+}
+/**/
+[data-theme='dark'] #body-wrap:before, [data-theme='dark'] #footer:before, [data-theme='dark'] #page-header:before {
+  background-color: rgba(0,0,0,0.7);
+}
+/*炫彩时间*
+.logosvg {
+  height:88px;
+  width:240px;
+  font-family:Source Serif Pro;
+}
+.words {
+  font-size:50px;
+  font-weight:bold;
+  text-transform:uppercase;
+  fill:none;
+  stroke-width:1.5px;
+  stroke-dasharray:90,310;
+  animation-name:drawing;
+  animation-duration:8s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+.words-1 {
+  stroke:deepskyblue;
+  text-shadow:0 0 30px #00bfff52;
+  animation-delay:-2s;
+}
+.words-2 {
+  stroke:lightseagreen;
+  text-shadow:0 0 30px #20b2aa52;
+  animation-delay:-4s;
+}
+.words-3 {
+  stroke:orange;
+  text-shadow:0 0 30px #ffa50052;
+  animation-delay:-6s;
+}
+.words-4 {
+  stroke:purple;
+  text-shadow:0 0 30px #80008052;
+  animation-delay:-8s;
+}
+@keyframes drawing {
+  100% {
+  stroke-dashoffset:-400;
+}
+}
+*/
