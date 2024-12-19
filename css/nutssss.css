@@ -61,8 +61,9 @@ body {
 }
 
 .meBox-title {
-    width: auto;
-    margin: 0 auto;
+    max-width: 400px; /* 设置一个最大宽度 */
+    width: auto;      /* 允许元素宽度根据内容自动调整，但不超过最大宽度 */
+    margin: 0 auto;   /* 水平居中元素 */
 }
 
 @keyframes typing {
@@ -78,13 +79,13 @@ body {
 }
 
 .meBox-title p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     border-right: .1em solid;
     width: 15ch;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 2s steps(20, end), blink-caret .3s step-end infinite alternate;
-    margin: -30px 0 0 90px;
+    margin: -30px 0 0 70px;
     transition: all 0.3s;
 }
 
@@ -356,7 +357,7 @@ body {
         width: 8rem;
         height: 8rem;
         margin: -0.5rem 0 0 -4rem;
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
 
     .meBox:hover .meBox-text {
@@ -389,30 +390,66 @@ body {
         margin: 0 auto;
         z-index: 1;
     }
+    #footer {
+        /*position: fixed; /* 固定定位 */
+        bottom: 0; /* 紧贴屏幕底部 */
+        left: 0; /* 紧贴屏幕左侧（可选，但通常与 width: 100% 一起使用） */
+        right: 0; /* 紧贴屏幕右侧（与 left: 0 和 width: 100% 一起使用时可选） */
+        /* 如果需要，可以添加 background-color, padding, margin-top（用于为内容留出空间）等样式 */
+        /* 注意：由于使用了 fixed 定位，margin-bottom 将不会有任何效果 */
+    }
+    body {
+        /* 例如，为 body 添加足够的下边距以容纳固定的 #footer */
+        /* 注意：这个值应该与 #footer 的高度相匹配，或者稍大一些以确保不会覆盖内容 */
+        padding-bottom: 10px; /* 这里的50px应该根据 #footer 的实际高度来调整 */
+    }   
 }
 
-/*微信二维码*/
-.weixin{
-    position:relative;
+
+
+
+
+/* 微信二维码 */
+.weixin {
+    position: relative;
   }
- .weixin::after{
-   content: url('../img/456.png');
-   position: absolute;
-   right: -28px;
-   top: -135px;
-   z-index: 99;
-   width: 420px;
-   height: 420px;
-   border: 5px solid #0095ba;
-   border-radius: 4px;
-   transform-origin: top right;
-   transform: scale(0);
-   opacity: 0;
-   -webkit-transition: all .4s ease-in-out;
-   -o-transition: all .4s ease-in-out;
-   transition: all .4s ease-in-out;
- }
- .weixin:hover::after{
-   transform:scale(1);
-   opacity: 1;
-}
+  
+  .weixin::after {
+    /* 注意：content 属性不能用于设置背景图片，应使用 background-image */
+    background-image: url('../img/456.png');
+    background-size: contain; /* 保持图片比例 */
+    background-repeat: no-repeat;
+    content: ''; /* 必须设置内容以生成伪元素 */
+    position: absolute;
+    right: -20px; /* 根据需要调整 */
+    top: -100px; /* 根据需要调整 */
+    z-index: 99;
+    width: 30vw; /* 使用视口宽度单位 */
+    height: 30vw; /* 使用视口宽度单位，保持宽高比 */
+    max-width: 320px; /* 在大屏幕上的最大宽度 */
+    max-height: 320px; /* 在大屏幕上的最大高度 */
+    border: 5px solid #0095ba;
+    border-radius: 4px;
+    transform-origin: top right;
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  /* 媒体查询，针对小屏幕进行调整 */
+  @media (max-width: 768px) {
+    .weixin::after {
+      width: 50vw; /* 在小屏幕上的宽度 */
+      height: 50vw; /* 在小屏幕上的高度 */
+      right: -10px; /* 根据需要调整 */
+      top: -75px; /* 根据需要调整 */
+    }
+  }
+  
+  .weixin:hover::after {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
