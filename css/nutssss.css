@@ -419,15 +419,15 @@ body {
     background-repeat: no-repeat;
     content: '';
     position: absolute;
-    right: -20px;
+    right: -9px;
     top: -100px;
     z-index: 99;
     width: 30vw;
     height: 30vw;
     max-width: 320px;
     max-height: 320px;
-    border: 5px solid #0095ba;
-    border-radius: 4px;
+    border: 5px solid rgb(0, 190, 0);
+    border-radius: 12px;
     transform-origin: top right;
     transform: scale(0);
     opacity: 0;
