@@ -8,6 +8,11 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    margin: 0;
+    font-size: 16px;
+    line-height: inherit;
+    min-height: 100vh;
+
 }
 
 #box {
@@ -81,7 +86,7 @@ body {
 .meBox-title p {
     font-size: 1.4rem;
     border-right: .1em solid;
-    width: 15ch;
+    width: 13ch;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 2s steps(20, end), blink-caret .3s step-end infinite alternate;
@@ -114,7 +119,7 @@ body {
 }
 
 .meBox-text p {
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .meBox:hover .meBox-text {
@@ -174,7 +179,7 @@ body {
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.9);
     transition: all 0.3s;
-    font-size: 14px;
+    font-size: 15px;
     color: rgb(88, 89, 92);
     position: relative;
     top: 0;
