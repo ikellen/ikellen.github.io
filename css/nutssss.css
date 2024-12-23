@@ -349,7 +349,7 @@ body {
     }
 
     .meBox-Button a:hover {
-        color: rgb(0, 132, 255);
+        color: rgb(70, 70, 70);
     }
     
     .meBox:hover .meBox-Button a {
