@@ -4,7 +4,7 @@
  
 @font-face {
     font-family: 'play';
-    src: url('./ttf/376cc735.ttf') format('truetype');
+    src: url('../ttf/376cc735.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
