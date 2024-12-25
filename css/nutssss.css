@@ -338,6 +338,9 @@ body {
 
 @media screen and (max-width: 768px)
 {
+    .meBox-title p {
+        margin: -33px 0 0 45px;
+    }
     .meBox {
         width: 300px;
     }
