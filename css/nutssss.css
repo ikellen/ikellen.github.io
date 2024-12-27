@@ -8,6 +8,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 #box {
@@ -16,6 +20,7 @@ body {
     height: 100px;
     margin: 0 auto;
     padding-top: 5%;
+    flex: 1;
 }
 
 .meBox {
@@ -284,7 +289,7 @@ body {
     color: white;
     float: left;
     text-align: center;
-    position: fixed;
+    /*position: fixed;*/
     bottom: 0;
     margin-bottom: 30px;
     /* background-color: blue; */
