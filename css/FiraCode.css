@@ -1,10 +1,1 @@
-* {
-    font-family: 'play', 微软雅黑, Microsoft YaHei UI, Microsoft YaHei, PingFang SC, Helvetica Neue, Helvetica, Arial, "sans-serif"!important;
-}
- 
-@font-face {
-    font-family: 'play';
-    src: url('../ttf/376cc735.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
+*{font-family:'play',微软雅黑,Microsoft YaHei UI,Microsoft YaHei,PingFang SC,Helvetica Neue,Helvetica,Arial,"sans-serif"!important}@font-face{font-family:'play';src:url('../ttf/376cc735.ttf') format('truetype');font-weight:500;font-style:normal}
